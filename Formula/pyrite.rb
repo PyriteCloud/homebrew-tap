@@ -1,25 +1,25 @@
 class Pyrite < Formula
   desc "Pyrite Cloud CLI"
   homepage "https://github.com/PyriteCloud/cli"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/PyriteCloud/cli/releases/download/v0.1.1/pyrite-aarch64-apple-darwin.tar.xz"
-      sha256 "aeed7466d7564f1084c7d23a8ba03809285dd30dfd15e6a9405d05dcdc661aa7"
+      url "https://github.com/PyriteCloud/cli/releases/download/v0.1.2/pyrite-aarch64-apple-darwin.tar.xz"
+      sha256 "b8212b4b8e1ad46420279ba7fb4677db2bc4725af15d51090fac8d3768be0c3c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/PyriteCloud/cli/releases/download/v0.1.1/pyrite-x86_64-apple-darwin.tar.xz"
-      sha256 "971ddbde0fa60297ca0d6b9e2f0cadc0d45acb73b815ec3443f317ebe084a53f"
+      url "https://github.com/PyriteCloud/cli/releases/download/v0.1.2/pyrite-x86_64-apple-darwin.tar.xz"
+      sha256 "46f7a5975aa8f2aaf54ee3ce9e461d6c9fd6a8508e6f6ccc88524e53b8d44e41"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/PyriteCloud/cli/releases/download/v0.1.1/pyrite-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7d9aa2043276497066653e2daa408163eb7e017e983e02f772053b995ed6b145"
+      url "https://github.com/PyriteCloud/cli/releases/download/v0.1.2/pyrite-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d1027c513da54082c783dd1b359b6b7782241e473e32be6e932518ecd515a204"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/PyriteCloud/cli/releases/download/v0.1.1/pyrite-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0739db88e827ed002f118b21ad797c2005180d07b01f964d5376bf318dc00a11"
+      url "https://github.com/PyriteCloud/cli/releases/download/v0.1.2/pyrite-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "cca1ea8e8476187ee608da7a3f2d189530a9d479f337d81f67fb0714e02636b3"
     end
   end
 
