@@ -1,25 +1,25 @@
 class Pyrite < Formula
   desc "Pyrite Cloud CLI"
   homepage "https://github.com/PyriteCloud/cli"
-  version "0.1.3"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/PyriteCloud/cli/releases/download/v0.1.3/pyrite-aarch64-apple-darwin.tar.xz"
-      sha256 "6ae3559d60cce5544ca66f1328cb3676702610ea3f0f7caf7f950f88fd1c20f5"
+      url "https://github.com/PyriteCloud/cli/releases/download/v0.2.0/pyrite-aarch64-apple-darwin.tar.xz"
+      sha256 "57ba99a036d6e6dcf2c68dfa4584bccfe0cdf1d758d15a7645fa47bc296fe223"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/PyriteCloud/cli/releases/download/v0.1.3/pyrite-x86_64-apple-darwin.tar.xz"
-      sha256 "916dc9c37108dd2a8be5dfc83826611be52ad6bee0c67beeb50069fa5373ff31"
+      url "https://github.com/PyriteCloud/cli/releases/download/v0.2.0/pyrite-x86_64-apple-darwin.tar.xz"
+      sha256 "da2429ba0f8798a1d8bf560b71fa9768047547bab71ca247adfaa0d550178cda"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/PyriteCloud/cli/releases/download/v0.1.3/pyrite-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "93400bc708b46130bc653f3dcd2fcefe14bb9342152c6c858cdaa707c8017741"
+      url "https://github.com/PyriteCloud/cli/releases/download/v0.2.0/pyrite-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "fa129ba940a3157864eef45157663229e657c4ad3309648f924b20dee197bd21"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/PyriteCloud/cli/releases/download/v0.1.3/pyrite-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "210817c3557f4921e128a2ecadc75953b9c2baec131d349269df5428cd3453c1"
+      url "https://github.com/PyriteCloud/cli/releases/download/v0.2.0/pyrite-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "baa46f2960d4ea71d4e09488c0ea688327e7defa32a9ec5c79badcfdceef6369"
     end
   end
 
@@ -47,10 +47,18 @@ class Pyrite < Formula
   end
 
   def install
-    bin.install "pyrite" if OS.mac? && Hardware::CPU.arm?
-    bin.install "pyrite" if OS.mac? && Hardware::CPU.intel?
-    bin.install "pyrite" if OS.linux? && Hardware::CPU.arm?
-    bin.install "pyrite" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "pyrite"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "pyrite"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "pyrite"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "pyrite"
+    end
 
     install_binary_aliases!
 
